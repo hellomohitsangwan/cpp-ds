@@ -22,8 +22,19 @@ void dec(int n) {
     dec(n-1);
 }
 
+//reverse string
+void reverse(string s) {
+    if(s.length() == 0) {
+        return;
+    }
+    reverse(s.substr(1));
+    cout<<s[0]<<" ";
+}
+
 int main() {
     inc(4);
     cout<<endl;
     dec(4);
+    cout<<endl;
+    reverse("mohit");
 }
