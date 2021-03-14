@@ -31,10 +31,21 @@ void reverse(string s) {
     cout<<s[0]<<" ";
 }
 
+//sum of digits of number
+    //342 = 9;
+int sodt(int n)   {
+    if(n == 0) {
+        return 0;
+    }
+    return sodt(n/10) + n%10;
+}
+
 int main() {
     inc(4);
     cout<<endl;
     dec(4);
     cout<<endl;
     reverse("mohit");
+    cout<<endl<<sodt(4839)<<endl;
+
 }
