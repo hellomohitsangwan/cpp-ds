@@ -39,13 +39,22 @@ int sodt(int n)   {
     }
     return sodt(n/10) + n%10;
 }
-
+ 
+// sum of elements of array , n = no of elements , a[] = array
+    
+int arraySum(int n , int a[]) {
+    if(n < 0) {
+        return 0;
+    }
+    return arraySum(n-1 , a) + a[n];
+}
 int main() {
     inc(4);
     cout<<endl;
     dec(4);
     cout<<endl;
     reverse("mohit");
-    cout<<endl<<sodt(4839)<<endl;
+    int a[] = {13 , 5, 2, 3};
+    cout<<endl<<sodt(4839)<<endl<<arraySum(3 , a);
 
 }
