@@ -48,6 +48,13 @@ int arraySum(int n , int a[]) {
     }
     return arraySum(n-1 , a) + a[n];
 }
+
+int fib(int n) {
+    if(n == 1 || n ==0) {
+        return n;
+    }
+    return fib(n-1) + fib(n-2);
+}
 int main() {
     inc(4);
     cout<<endl;
@@ -55,6 +62,6 @@ int main() {
     cout<<endl;
     reverse("mohit");
     int a[] = {13 , 5, 2, 3};
-    cout<<endl<<sodt(4839)<<endl<<arraySum(3 , a);
+    cout<<endl<<sodt(4839)<<endl<<arraySum(3 , a)<<endl<<fib(5);
 
 }
