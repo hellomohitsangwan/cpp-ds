@@ -11,7 +11,7 @@ int main() {
 
     // iterator syntax
     // data_type :: iterator it;  //its just a pointer pointig to the value you equate
-        // it++ : next iterator  //use this always;
+    // it++ : next iterator  //use this always;
     // it+1 : next location;
     vector<int> :: iterator it;  
     for(it= v.begin(); it!= v.end(); it++) {
@@ -25,7 +25,7 @@ int main() {
         //or  ((*vpit).first ==== vpit->first)
         cout<<(vpit)->first<<" "<<(vpit)->second<<endl;
     }
-        for(auto itt = vp.begin() ; itt != vp.end(); itt++) {  //short way (use auto keyword)
+    for(auto itt = vp.begin() ; itt != vp.end(); itt++) {  //short way (use auto keyword)
         cout<<(*itt).first<<" "<<(*itt).second<<endl;
     }
 }
