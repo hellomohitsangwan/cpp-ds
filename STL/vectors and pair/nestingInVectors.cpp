@@ -21,5 +21,32 @@ int main() {
     }
 
     //array or vectors
-    vector<int> va[10];
+    vector<int> va[10];   //array of vectos of size 10
+    for (int i = 0; i < 10; i++) {
+        int sov; cin >>sov;
+        for (int i = 0; i < sov; i++)
+        {
+            int x;cin >>x;
+            va[i].push_back(x);
+        }
+                
+    }
+
+    //vector of vectors
+    vector<vector<int>> vv;
+    int s; cin >>s;
+    for (int i = 0; i < s; i++)
+    {
+        int n;cin>>n;
+        vector<int>tbi;
+        for (int i = 0; i < n; i++)
+        {
+            int x;cin>>x;
+            tbi.push_back(x);
+        }
+        vv.push_back(tbi);  
+    }
+    
 }
+
+
