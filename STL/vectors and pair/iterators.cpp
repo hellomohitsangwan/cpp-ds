@@ -24,6 +24,8 @@ int main() {
         cout<<(*vpit).first<<" "<<(*vpit).second<<endl;
         //or  ((*vpit).first ==== vpit->first)
         cout<<(vpit)->first<<" "<<(vpit)->second<<endl;
-        
+    }
+        for(auto itt = vp.begin() ; itt != vp.end(); itt++) {  //short way (use auto keyword)
+        cout<<(*itt).first<<" "<<(*itt).second<<endl;
     }
 }
