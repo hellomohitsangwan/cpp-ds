@@ -10,6 +10,13 @@ class node {
         next = NULL;
     }
 };
+void addToHead(node* &head , int val) {
+    node *temp = head;
+    node *toAdd = new node(val);
+
+    toAdd->next = head;
+    head = toAdd;  //his is neccessary to do bec. we have to change the refrence of head 
+    }
 void addToLast(node* &head , int data) {
     node* toAdd = new node(data);
     if(head == NULL) {
@@ -29,9 +36,15 @@ void print(node* head) {
     {
         cout<<temp->data<<"->";
         temp = temp->next;
-    }
+    } cout<<"NULL";
 }
 int main() {
-    node* head;
-    head.addto
+    node* head=NULL;
+    addToLast(head , 4);
+    addToLast(head , 5);
+    addToLast(head , 6);
+    addToHead(head , 1);
+        addToLast(head , 7);
+            addToLast(head , 8);
+    print(head);
 }
