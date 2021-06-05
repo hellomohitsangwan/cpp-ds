@@ -44,7 +44,7 @@ int main() {
     addToLast(head , 5);
     addToLast(head , 6);
     addToHead(head , 1);
-        addToLast(head , 7);
-            addToLast(head , 8);
+    addToLast(head , 7);
+    addToLast(head , 8);
     print(head);
 }
