@@ -7,12 +7,7 @@ class model {
     string title , author;
     
     void get() {
-        // this->isbnNo = isno;
-        // this->year = year;
-        // this->title = title;
-        // this->author = author;
         cin>>isbnNo>>title>>author>>year;
-        // cout<<isbnNo << " "<<title<<" "<<author<<" "<<year;
     }
 };
 class cd : public model {
@@ -23,11 +18,10 @@ class cd : public model {
         model :: get();
         cin>>dur;
     }
-    
-    void print() {
-        price = 2*dur;
-                cout<<isbnNo << " "<<title<<" "<<price;
-    //   cout<<isbnNo<<endl<<title<<endl<<price<<endl;
+
+        void print() {
+            price = 2*dur;
+     cout<<isbnNo<<endl<<title<<endl<<price<<endl;
     }
 };
 class book : public model {
@@ -40,7 +34,7 @@ class book : public model {
     }
     void print() {
             price = pages;
-       std :: cout<<isbnNo<<endl<<title<<endl<<price<<endl;
+       cout<<isbnNo<<endl<<title<<endl<<price<<endl;
     }
 };
 
@@ -49,7 +43,6 @@ int main() {
     int isn , year;
     string author , title;
     model m;
-    // m.get();
     book b;
     cd c;
     int p , l;
