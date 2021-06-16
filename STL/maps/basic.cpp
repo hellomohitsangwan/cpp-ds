@@ -24,6 +24,9 @@ int main() {
     } else {
         cout<<it->first<<" "<<it->second<<endl;
     }
-    // cout<<(*it).first<<endl;
+    
+    //erase function : erase(key/iterator) method erases/delete the key-value from the map
+    m.erase("abc");
+    // m.clear();  //it clears/delete all the map
     print(m);
 }
