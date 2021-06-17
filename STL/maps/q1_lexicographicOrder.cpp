@@ -8,6 +8,8 @@ int main() {
     {
         string s;cin>>s;
         m[s] = m[s] + 1;
+        // or
+        // m[s]++;
     }
     for(auto kp : m) {
         cout<<kp.first<<" "<<kp.second<<endl;
@@ -15,14 +17,28 @@ int main() {
 
 
 
-    string s = "mohit";
-    map<char , int> mp;
-    for (int i = 0; i < s.length(); i++) {
-        mp[s[i]]++;
-    }
-        for(auto kp : mp) {
-        cout<<kp.first<<" "<<kp.second<<endl;
-    }
+    // string s = "mohit";
+
+
+
+
+
+    // map<char , int> mp;
+    // for (int i = 0; i < s.length(); i++) {
+    //     mp[s[i]]++;
+    // }
+
+
+
+
+
+
+
+
+
+    //     for(auto kp : mp) {
+    //     cout<<kp.first<<" "<<kp.second<<endl;
+    // }
     
 
 }
