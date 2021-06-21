@@ -15,7 +15,7 @@ int main() {
     }
     catch(string exception)
     {
-        cout<< exception << '\n';
+        cout<<exception << '\n';
     }
 
     
