@@ -30,7 +30,7 @@ int main() {
 
     swap(v2 , v);  //the swap function swap the values that are passed in the function in this case it swaps all the values of v and v2
     for(int e:v) {
-        cout<<e<<endl;
+        cout<<e<<endl;`
     }
     for(int e:v2) {
         cout<<e<<endl;
