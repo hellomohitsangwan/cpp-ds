@@ -63,5 +63,4 @@ int main() {
     reverse("mohit");
     int a[] = {13 , 5, 2, 3};
     cout<<endl<<sodt(4839)<<endl<<arraySum(3 , a)<<endl<<fib(5);
-
 }

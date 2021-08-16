@@ -40,7 +40,7 @@ node* reversell (node* &head) {
     node* nextPtr;
 
     while (currPtr != NULL) {
-        nextPtr = currPtr->next;
+        nextPtr = currPtr->next; //we need to store the curr.next in nextPtr here bec. after that we are changing the curr.next ptr to previous ptr ao not able to do it after (just like savung a digin in temp before swaping)
         currPtr->next = prevPtr;
 
         prevPtr = currPtr;
