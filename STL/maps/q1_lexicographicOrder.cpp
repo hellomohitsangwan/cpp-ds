@@ -15,6 +15,23 @@ int main() {
         cout<<kp.first<<" "<<kp.second<<endl;
     }
 
+    // for(int i = 0 ; i < 1000 ; i++) {
+
+    //     int n = rand() % 49 + 2;
+    //     // while(n < 2 || n > 50) {
+    //     //     n = rand();
+    //     // }
+    //     cout<<n<<endl;
+    //     for(int i = 0 ; i < 2*n ; i++) {
+    //         int value =  rand() % 99 + 2;
+    //         // while(value < 1 || value > 101) {
+    //         //     value = rand();
+    //         // }
+    //         cout<<value<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
 
 
     // string s = "mohit";
