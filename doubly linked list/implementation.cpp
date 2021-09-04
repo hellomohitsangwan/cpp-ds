@@ -34,15 +34,27 @@ void print(node* head) {
         temp = temp->next;
     }
 }
+void deleteAtHead(node* head) {
+    node* toDelete = head;
+    head->next = head;
+    head->prev = NULL;
+    delete toDelete;
+}
 void deleteNode(node* &head , int pos) {
+    if(pos == 1) {
+        deleteAtHead(head);
+    }
     node* temp = head;
     int counter = 1;
-    while(counter != pos) {
+    while(counter != pos && temp != NULL) {
         counter++;
         temp = temp->next;
     }
     node* toDelete = temp;
-    toDelete->next->prev = toDelete->prev;
+    if(toDelete->next != NULL) {
+        toDelete->next->prev = toDelete->prev;
+    }
+
     toDelete->prev->next = toDelete->next;
 }
 int main() {
@@ -51,6 +63,6 @@ int main() {
     insertAtTail(n,4);
     insertAtTail(n,7);
     insertAtTail(n,8);
-    deleteNode(n , 3);
+    deleteNode(n,3);
     print(n);
 }
