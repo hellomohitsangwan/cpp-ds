@@ -49,6 +49,7 @@ int length(node* head) {
     return counter;
 }
 node* appendNodes(node* &head , int k) {
+    k = k%length(head);  //this is handle the case if k is greter than length of linked list , suppose l = 5 and k = 7 {k = k ? (k < l) : l-k}
     node* temp = head;
     int counter = 1;
     node* newHead;
