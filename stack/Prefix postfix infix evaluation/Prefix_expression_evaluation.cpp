@@ -9,7 +9,7 @@ using namespace std;
 4. When we reach the start of the string, the result will be inside the stack. We return the top of the stack as the result of the expression.
 */
 // cpp
- // -+7*45+20 = 25
+ // -+7*45+20 = 25  {7 + (4*5) - (2+0)}
 int convert(string s) {
     stack<int> st;
     for (int i = s.length() - 1; i >= 0 ; i--) {
