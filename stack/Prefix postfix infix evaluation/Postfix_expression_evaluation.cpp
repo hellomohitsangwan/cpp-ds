@@ -1,24 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+ // 46+2/5*7+ = 32
 /*
-1. We start from the last character of the string and traverse the string from right to left.
-2. If the current character is a digit, we push it into the stack.
-3. If the current character is an operator, we pop two elements from the stack. The first pop is the second operand and the next pop is the first operand.
- We perform the operation on the two operands and push the result back to the stack.
-4. When we reach the start of the string, the result will be inside the stack. We return the top of the stack as the result of the expression.
+1. We start with a stack of integers.
+2. We iterate over the string.
+3. If the character is a digit, we push it onto the stack.
+4. If the character is an operator, we pop the top two elements from the stack, apply the operator on them and push the result back.
+5. At the end of the iteration, the stack will have the final result, which we return.
 */
-// cpp
- // -+7*45+20 = 25
 int convert(string s) {
     stack<int> st;
-    for (int i = s.length() - 1; i >= 0 ; i--) {
+    for (int i = 0; i < s.length() ; i++) {
         if(s[i] <= '9' && s[i] >= '0') {
             st.push(s[i] - '0');
         } else {
-            int o1 = st.top();
-            st.pop();
             int o2 = st.top();
+            st.pop();
+            int o1 = st.top();
             st.pop();
             cout<<"opeations : "<<endl;
             cout<<o1 << s[i] <<o2<<endl;
