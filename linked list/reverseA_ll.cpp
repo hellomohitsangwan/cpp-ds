@@ -34,6 +34,8 @@ void print(node* head) {
 
 
 //approch -1 : iterator method
+
+
 node* reversell (node* &head) {
     node* prevPtr = NULL;
     node* currPtr = head;
@@ -51,6 +53,7 @@ node* reversell (node* &head) {
 }
 
 //approch - 2: reecusive method 
+
 node* reversell__recursive (node* &head) {
 
     //base case:
