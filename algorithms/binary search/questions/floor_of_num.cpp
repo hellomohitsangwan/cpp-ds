@@ -6,6 +6,7 @@ using namespace std;
 int findFloor(int a[] , int find , int len) {
     int start  = 0;
     int end = len;
+
     while(start <= end) {
             int midIndex = start + (end - start)/2;
         if(a[midIndex] > find) {  //element is present in the left side
