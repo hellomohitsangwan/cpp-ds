@@ -1,11 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//  @desc : return the index of smallest greater than or equal to find element 
+//  @desc : return the index of smallest number greater than or equal to find element 
 // @params : array , elemen to find , length of array
 int findCeil(int a[] , int find , int len) {
     int start  = 0;
     int end = len;
+
+    // what if no number is greater than the given nuberity?
+    if(find > a[len - 1]) {
+        return -1;
+    }
     while(start <= end) {
             int midIndex = start + (end - start)/2;
         if(a[midIndex] > find) {  //element is present in the left side

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//  @desc : return the index of smallest greater than or equal to find element 
+//  @desc : return the index of greatest number less than or equal to find element 
 // @params : array , elemen to find , length of array
 int findFloor(int a[] , int find , int len) {
     int start  = 0;
