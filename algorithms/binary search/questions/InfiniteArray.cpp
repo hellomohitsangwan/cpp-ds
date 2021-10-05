@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 int binary(int a[] , int target , int start , int end) {
@@ -10,7 +10,7 @@ int binary(int a[] , int target , int start , int end) {
             end = midIndex - 1;
         } else {
             return midIndex;
-        }
+        } 
     } return -1;
 }
 
