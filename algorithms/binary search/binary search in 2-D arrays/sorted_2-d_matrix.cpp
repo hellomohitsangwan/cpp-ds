@@ -4,7 +4,6 @@ using namespace std;
 
 vector<int> binarySearch(vector<vector<int>> v, int row, int colStart, int colEnd, int t)
 {
-
     while (colStart <= colEnd)
     {
         int mid = (colEnd + colStart) / 2;
