@@ -40,6 +40,6 @@ int piirsa(int a[] , int l) {
 }
 
 int main() {
-    int a[] = {3 ,4 ,5, 0, 1, 2};
-    cout<<piirsa(a , 6);
+    int a[] = {2,5,6,0,0,1,2};
+    cout<<piirsa(a , 7);
 }
