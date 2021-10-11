@@ -9,7 +9,7 @@ void selectionSort(vector<int> &v) {
         int lastIndex = v.size() - i - 1;
         //int max. index:
         int maxIndex;
-        int max = -1;
+        int max = -999999;
         for(int j = 0; j < v.size() - i; j++) {
             if(v[j] > max) {
                 maxIndex = j;
