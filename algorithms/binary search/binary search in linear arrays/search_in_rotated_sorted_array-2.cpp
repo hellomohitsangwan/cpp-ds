@@ -37,44 +37,31 @@ using namespace std;
         }
     } return mid;
     }
-    int bs(vector<int> a , int find , int start , int end) {
-        // while(s<=e) {
-        //     int mid = (s+e)/2;
-        //     if(a[mid] == a[f]) {
-        //         return true;
-        //     }
-        //     else if(a[mid] > a[f]) {
-        //         e = mid-1;
-        //     } else{
-        //         s = mid+1;
-        //     }
-        // } return false;
+    int bs(vector<int> a , int f , int s , int e) {
+        while(s<=e) {
+            int mid = (s+e)/2;
+            if(a[mid] == f) {
+                return 1;
+            }
+            else if(a[mid] > f) {
+                e = mid-1;
+            } else{
+                s = mid+1;
+            }
+        } return 0;
         
-    while(start <= end) {
-            int midIndex = start + (end - start)/2;
-        if(a[midIndex] > find) {  //element is present in the left side
-            end = midIndex - 1;
-        } else if(a[midIndex] < find) {  //element is present in the right side
-            start = midIndex + 1;
-        } else {
-            return midIndex;
-        }
-    } return -1;  //element is not present in the array
         
     }
     bool search(vector<int> &nums, int target) {
         int pi = pivot(nums , nums.size()); 
-        cout<<pi<<endl;
+        
         if(bs(nums , target , 0 , pi)) {
-            cout<<"call" << target << pi;
             return true;
-        } else {
-            return (bs(nums , target , pi + 1 , nums.size()-1));
-        }
-        // return bs(nums , target , 0 , pi);
+        } return (bs(nums , target , pi + 1 , nums.size()-1));
+
     }
 int main() {
     vector<int>a {2,5,6,0,0,1,2};
-    // cout<<search(a,1)<<endl;
-    cout<<bs(a,3,0,2)<<endl;
+    cout<<search(a,0)<<endl;
+    // cout<<bs(a,3,0,2)<<endl;
 }
