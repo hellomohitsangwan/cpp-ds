@@ -47,7 +47,7 @@ int missingNumber(vector<int>& v) {
     int i = 0;
     // before going into while loop
     //  v = {9,6,4,2,3,5,7,0,1}
-    while(i < v.size() -  1) {
+    while(i < v.size()) {
         int correctIndex = v[i];
         //check if currect element is present at its correct index
         //but before that we have to check if element is eqals to the length , bec. range is 0-n and n is included
@@ -59,21 +59,24 @@ int missingNumber(vector<int>& v) {
             v[i] = v[correctIndex];
             v[correctIndex] = temp;
         }
+
     }
+
     // after coming
     // v = {0,1,2,3,4,5,6,7,9}
-    //now as our array is sorted and we know that v[i] = i (bec. elements startes from 0 and are cntinuos) so we cabn just directly iterate into the array find the missing element by the condn.
+    //now as our array is sorted and we know that v[i] = i (bec. elements starts from 0 and are cntinuos) so we cabn just directly iterate into the array find the missing element by the condn.
     for(int j = 0 ; j < v.size() ; j++) {
         // v = {0,1,2,3,4,5,6,7,9}  
         // so now on index 8 element 8 should be present but it's not so 8 is missing
-        if(v[i] != i) {
-            return i;
+        if(v[j] != j) {
+            return j;
         }
 
-    } return -1;  //if incase no element is missing
+    } return v.size();  //if incase no element is missing
 }
 
 int main() {
-    vector<int> v{9,6,4,2,3,5,7,0,1};
+    vector<int> v{3,0,1};
     cout<<missingNumber(v);
+
 }

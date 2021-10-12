@@ -64,6 +64,7 @@ using namespace std;
     }
     bool search(vector<int> &nums, int target) {
         int pi = pivot(nums , nums.size()); 
+        cout<<pi<<endl;
         if(bs(nums , target , 0 , pi)) {
             cout<<"call" << target << pi;
             return true;
@@ -74,6 +75,6 @@ using namespace std;
     }
 int main() {
     vector<int>a {2,5,6,0,0,1,2};
-    cout<<search(a,3)<<endl;
-    // cout<<bs(a,3,0,2)<<endl;
+    // cout<<search(a,1)<<endl;
+    cout<<bs(a,3,0,2)<<endl;
 }
