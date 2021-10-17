@@ -13,13 +13,30 @@ struct Node
     }
 };
 
-void pre(Node* &root) {
+void pre(Node* root) {
     if(root == NULL) {
         return;
     }
     cout<<root->data;
     pre(root->left);
     pre(root->right);
+}
+void post(Node* root)
+{
+    if (root == NULL)
+        return;
+    post(root->left);
+    post(root->right);
+    cout<<root->data;
+}
+ 
+void inorder(Node* root)
+{
+    if (root == NULL)
+        return;
+    inorder(root->left);
+    cout<<root->data;
+    inorder(root->right);
 }
 
 int main() {
@@ -31,4 +48,8 @@ int main() {
   root->right->left = new Node(6);
   root->right->right = new Node(7);
   pre(root);
+  cout<<endl;
+  post(root);
+  cout<<endl;
+  inorder(root);
 }
