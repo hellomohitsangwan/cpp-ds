@@ -24,13 +24,14 @@ int findPos(int a[] , int start , int end , int curr) {
 }
 
 Node* buildTree(int preorder[] , int inorder[] , int start , int end) {
+    static int i = 0 ;
     if (start > end)
     {
         return NULL;
     }
-    int i = 0 ;
+
     int curr = preorder[i];
-    i--;
+    i++;
     Node *node = new Node(curr);
 
     if (start == end)
