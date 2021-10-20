@@ -35,8 +35,8 @@ int length_itrative(Node *root) {
 
 int length_recursive(Node *root) {
     if(root == NULL) return 0;
-    int lm = length_recursive(root->left);
-    int rm = length_recursive(root->right);
+    int lm = length_recursive(root->left);  //left max
+    int rm = length_recursive(root->right);  //right max
     return 1 + max(lm , rm);
     }
 int main() {

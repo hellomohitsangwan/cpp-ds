@@ -41,7 +41,6 @@ int sodt(int n)   {
 }
  
 // sum of elements of array , n = no of elements , a[] = array
-    
 int arraySum(int n , int a[]) {
     if(n < 0) {
         return 0;
