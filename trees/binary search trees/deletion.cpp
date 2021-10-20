@@ -41,7 +41,7 @@ Node * deleteNode(Node *root , int val) {
                 root = root->right;
             }
         }
-    } return dummy
+    } return dummy;
 
 }
 Node *deleteLink(Node * root) {
