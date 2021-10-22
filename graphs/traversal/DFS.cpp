@@ -8,6 +8,7 @@ void DFS_of_graph(int n , vector<int> adj[]) {
     for(int i = 1 ; i <= n ; i++) {
         if(!isVisted[i]) {
             //call the dfs function
+            dfs(i , adj , isVisted , dfsOrder);
         }
     }
 }
