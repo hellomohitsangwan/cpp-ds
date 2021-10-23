@@ -21,9 +21,8 @@ int length_itrative(Node *root) {
     q.push({root , 1});
     while(!q.empty()) {
         Node* currRootNode = q.front().first;
-        int currentRootNodeCount = q.front().second;
-        if(currRootNode->left) q.push({currRootNode->left , currentRootNodeCount+1});
-        if(currRootNode->right) q.push({currRootNode->right , currentRootNodeCount+1});
+        if(currRootNode->left) q.push({currRootNode->left , q.front().second+1});
+        if(currRootNode->right) q.push({currRootNode->right , q.front().second+1});
 
         //condition when only leaf is their 
         if(q.size() == 1) {  //means it's the last node of the longest sequence
