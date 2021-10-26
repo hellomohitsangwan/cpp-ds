@@ -6,8 +6,8 @@ vector<int> mergee(vector<int>l , vector<int> r) {
     int i = 0;  //l
     int j = 0; //r
     while(!l.empty() && !r.empty()) {
-        if(l[i] > r[i]) {
-            ans.push_back(l[j]);
+        if(l[i] > r[j]) {
+            ans.push_back(r[j]);
             j++;
         } else {
             ans.push_back(l[i]);
@@ -21,6 +21,7 @@ vector<int> mergee(vector<int>l , vector<int> r) {
         ans.push_back(r[j]);
         j++;
     }
+    
     return ans;
 }
 vector<int> mergeSort(vector<int> v) {
