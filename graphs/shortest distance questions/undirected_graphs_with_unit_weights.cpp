@@ -23,7 +23,6 @@ void BFS(vector<int> adj[] , int src , int n) {
     }
 }
 
-
 int main() {
   
 }
