@@ -25,9 +25,7 @@ int reverseMethodTwo(int n)
 }
 bool isPalindrome(int n)
 {
-    if (n == reverseMethodTwo(n))
-        return true;
-    return false;
+    return n == reverseMethodTwo(n);
 }
 int main()
 {
