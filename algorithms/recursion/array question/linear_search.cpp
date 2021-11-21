@@ -23,7 +23,7 @@ vector<int> allIndexes_withoout_passingArray(vector<int> v , int t , int i) {
     if(i == v.size()) return ans;
     if(v[i] == t) ans.push_back(i);
     vector<int> listFromBelowCalls =  (allIndexes(v , t , ++i , ans));
-    ans.insert(ans.end() , listFromBelowCalls.begin() , listFromBelowCalls.end());
+    ans.insert(ans.end() , listFromBelowCalls.begin() , listFromBelowCalls.end());  //just adding all the returned in our list.
     return ans;
 }
 int main() {
