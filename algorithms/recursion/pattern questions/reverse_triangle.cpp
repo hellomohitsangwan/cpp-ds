@@ -17,7 +17,7 @@ int maxCrossingsum(int arr[], int l, int m, int h)
         }
     }
     int rightsum = INT_MIN;
-    sum = 0;
+    sum = 0; 
     for (int i = m + 1; i <= h; i++)
     {
         sum += arr[i];
