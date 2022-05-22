@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 //Recursive
@@ -20,6 +21,24 @@ void print_Rev_Tri_Rec(int r , int c) {
     }
 } 
 
+//bubble sort recur
+void bubbleSortRecur(vector<int> &a , int r , int c) {
+    if(r == 0) {
+        return;
+    }
+    if(r > c) {
+        if(a[c] > a[c+1]) {
+            //swap
+            int temp = a[c];
+            a[c] = a[c+1];
+            a[c+1] = temp;
+        }
+        bubbleSortRecur(a , r , ++c);
+    } else {
+        bubbleSortRecur(a , --r , 0);
+    }
+}
+
 //iterative
 void print_Rev_tri_Ite(int r , int c) {
     for(int i  = r ; i > 0 ; i--) {
@@ -30,5 +49,12 @@ void print_Rev_tri_Ite(int r , int c) {
     }
 }
 int main() {
-    print_Rev_tri_Ite(4 , 0);
+    // print_Rev_tri_Ite(4 , 0);
+    vector<int> a = {5 , 3 , 9 , 7, 2};
+    bubbleSortRecur(a  , 5, 0);
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    
 }
