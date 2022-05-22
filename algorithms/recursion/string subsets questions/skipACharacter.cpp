@@ -28,5 +28,5 @@ string skipWPA(string up) {
 }
 int main() {
   cout<<skipWPA("uyihahushuahahahaah")<<endl;
-  cout<<skip(" " , uyihahushuahahahaah");
+  cout<<skip(" " , "uyihahushuahahahaah");
 }
