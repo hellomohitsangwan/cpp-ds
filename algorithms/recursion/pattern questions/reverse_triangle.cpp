@@ -1,53 +1,34 @@
-#include <bits/stdc++.h>
-#include <climits>
+#include<iostream>
 using namespace std;
 
-int max(int a, int b, int c) { return max(max(a, b), c); }
+//Recursive
+//  r = 4, c = 0;
+// ****
+// ***
+// **
+// *
+void print_Rev_Tri_Rec(int r , int c) {
+    if(r == 0) {
+        return;
+    }
+    if(r > c) {
+        cout<<"*";
+        print_Rev_Tri_Rec(r , ++c);
+    }else {
+        cout<<endl;
+        print_Rev_Tri_Rec(--r , 0);
+    }
+} 
 
-int maxCrossingsum(int arr[], int l, int m, int h)
-{
-    int leftsum = INT_MIN;
-    int sum = 0;
-    for (int i = m; i >= l; i--)
-    {
-        sum += arr[i];
-        if (sum > leftsum)
-        {
-            leftsum = sum;
+//iterative
+void print_Rev_tri_Ite(int r , int c) {
+    for(int i  = r ; i > 0 ; i--) {
+        for(int j = 0 ; j < i ; j++) {
+            cout<<"*";
         }
+        cout<<endl;
     }
-    int rightsum = INT_MIN;
-    sum = 0; 
-    for (int i = m + 1; i <= h; i++)
-    {
-        sum += arr[i];
-        if (sum > rightsum)
-        {
-            rightsum = sum;
-        }
-    }
-    return max(leftsum + rightsum, leftsum, rightsum);
 }
-int max_subarray(int arr[], int l, int h)
-{
-    int leftsum, rightsum, crosssum;
-    if (h == l)
-    {
-        return arr[l];
-    }
-    int m = (l + h) / 2;
-    return max(max_subarray(arr, l, m), maxCrossingsum(arr, l, m, h), max_subarray(arr, m + 1, h));
-}
-
-int main()
-{
-    int n;
-    int arr[10];
-    cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    int maximum = max_subarray(arr, 0, n - 1);
-    cout << maximum;
+int main() {
+    print_Rev_tri_Ite(4 , 0);
 }
