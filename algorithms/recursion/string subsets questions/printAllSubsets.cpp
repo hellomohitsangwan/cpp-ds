@@ -11,6 +11,43 @@ void printAllSubsets(string p , string up) {
     printAllSubsets(p , up.substr((1)));
 }
 
+vector<vector<int>> allSubsetsIte(vector<int> v) {
+    vector<vector<int>> outer;
+    outer.push_back(vector<int>{});
+
+    for(auto e : v) {
+
+        //creating the same number of vectors everytime as the current lenght of outer vector and then appending them
+        for(int i = 0 ; i < outer.size() ; i++) {
+            //add the inner vectors
+
+            vector<int> in = outer[i].push_back(e)
+            outer.push_back(in);
+        }
+    } return outer;
+}
+
+vector<vector<int>> allSubsetsIteRepallowed(vector<int> v) {
+    sort(v.begin() , v.end()); //we're sorting bec. our method will only work for adjacent duplicates so to make them adjacnts we're sorting them.
+    vector<vector<int>> outer;
+    outer.push_back(vector<int>{});
+    int start , end;
+    for(int i = 0 ; i < v.size() ; i++) {
+        int start = 0;
+        if(v[i] == v[i-1]) {
+            //duplicate found
+            start = end + 1;
+        }
+        end = outer.size() - 1;
+        //creating the same number of vectors everytime as the current lenght of outer vector and then appending them
+        for(int j = start ; j < outer.size() ; j++) {
+            //add the inner vectors
+
+            vector<int> in = outer[j].push_back(v[i])
+            outer.push_back(in);
+        }
+    } return outer;
+}
 //with the ascii code also
 void printAllSubsetsAsciiAlso(string p , string up) {
     if(up.length() == 0) {
