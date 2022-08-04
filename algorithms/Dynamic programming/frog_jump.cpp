@@ -13,8 +13,17 @@ int findMin(int a[] , int i , vector<int>dp) {
     return dp[i] = min(os , ts);
 }
 
-
+int findMinTab(int a[] , int n , vector<int>dp) {
+    dp[0] = 0;
+    for(int i = 1 ; i < n ; i++) {
+        int os = dp[i-1] + abs(a[i] - a[i-1]);
+        int ts = INT_MAX;
+        if(i>1) ts = dp[i-2] + abs(a[i] - a[i-2]);
+        dp[i] = min(os , ts);
+    }
+    return dp[n];
+}
 int main() {
   int a[] = {10, 30, 40, 20};
-  cout<<findMin(a , 3 , vector<int>(4 , -1));
+  cout<<findMinTab(a , 3 , vector<int>(4 , -1));
 }
