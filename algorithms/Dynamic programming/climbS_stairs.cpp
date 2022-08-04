@@ -21,7 +21,17 @@ int computStepsDp(int n , int i , vector<int> dp) {
     return dp[i] =  os+ts;
 }
 
+int computeStepsTabulation(int n ,  int i , vector<int> dp) {
+    dp[n] = 1;
+    dp[n+1] = 0;
+
+    for(int i  = n-1 ; i >= 0 ; i--) {
+        int os = dp[i+1];
+        int ts = dp[i+2];
+        dp[i] = os+ts;
+    }
+}
 int main() {
   int n; cin>>n;
-  cout<<computStepsDp(n , 0 , vector<int>(n+1 , -1));
+  cout<<computeStepsTabulation(n , 0 , vector<int>(n+1 , -1));
 }
