@@ -21,7 +21,7 @@ int findMinTab(int a[] , int n , vector<int>dp) {
         if(i>1) ts = dp[i-2] + abs(a[i] - a[i-2]);
         dp[i] = min(os , ts);
     }
-    return dp[n];
+    return dp[n-1];
 }
 int main() {
   int a[] = {10, 30, 40, 20};
