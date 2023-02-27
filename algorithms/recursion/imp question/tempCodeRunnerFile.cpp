@@ -1,3 +1,2 @@
-auto e:ds) {
-            //     cout<<e<< " ";
-            // }
+    cs -= a[i];
+    ds.pop_back();

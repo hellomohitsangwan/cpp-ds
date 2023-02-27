@@ -28,5 +28,5 @@ int allPermutationsAndReturnCount(string p , string up ) {
 }
 
 int main() {
-  allPermutations("" , "abc");
+  cout<<allPermutationsAndReturnCount("" , "abc");
 }
